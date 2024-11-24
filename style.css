@@ -75,6 +75,12 @@ h1 {
   transition: transform 200ms;
 }
 
+.button.secondary {
+  background: none;
+  border: 1px solid var(--color-foreground);
+  color: var(--color-foreground);
+}
+
 .button:disabled {
   cursor: default;
   opacity: 0.5;
@@ -117,33 +123,50 @@ p {
 
 form {
   display: flex;
-  gap: 0px;
+  gap: 16px;
   text-align: left;
   margin: auto;
+  max-width: 300px;
   flex-direction: column;
 }
 
 form .error {
-  background-color: yellow;
-  color: red;
-  padding: 32px;
-  font-weight: bold;
-  font-family: Rye;
+  background-color: rgb(254, 91, 91);
+  color: var(--color-background);
+  padding: 4px 16px;
+  border-radius: 8px;
   display: none;
+}
+
+form .error p {
+  color: var(--color-background);
 }
 
 form .error[visible="true"] {
   display: block;
 }
 
+.actions {
+  display: flex;
+  margin: auto;
+  gap: 8px;
+}
+
 input,
 select,
 textarea {
   appearance: none;
-  padding: 4px;
+  padding: 8px;
   border-radius: 4px;
   width: 100%;
-  border: 1px solid black;
+  background-color: var(--color-foreground);
+  border: none;
+  drop-shadow: 5px 5px 5px var(--color-shadow);
+}
+
+label {
+  color: var(--color-foreground);
+  font-weight: 300;
 }
 
 fieldset {
