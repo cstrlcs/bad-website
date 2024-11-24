@@ -23,16 +23,16 @@ header {
   gap: 32px;
   text-align: left;
   padding: 16px 32px;
+}
 
-  & nav {
-    display: flex;
-    gap: 8px;
-    width: 100%;
+header nav {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+}
 
-    & .cart {
-      margin-left: auto;
-    }
-  }
+header nav .cart {
+  margin-left: auto;
 }
 
 main {
@@ -60,22 +60,20 @@ main {
   cursor: pointer;
   border: none;
   transition: transform 200ms;
+}
 
-  &:disabled {
-    cursor: default;
-    opacity: 0.5;
-    border: none;
-  }
+.button:disabled {
+  cursor: default;
+  opacity: 0.5;
+  border: none;
+}
 
-  &:not(:disabled) {
-    &:hover {
-      transform: scale(1.05);
-    }
+.button:not(:disabled):hover {
+  transform: scale(1.05);
+}
 
-    &:active {
-      transform: scale(0.95);
-    }
-  }
+.button:not(:disabled):active {
+  transform: scale(0.95);
 }
 
 marquee {
@@ -106,19 +104,19 @@ form {
   text-align: left;
   margin: auto;
   flex-direction: column;
+}
 
-  & .error {
-    background-color: yellow;
-    color: red;
-    padding: 32px;
-    font-weight: bold;
-    font-family: Rye;
-    display: none;
+form .error {
+  background-color: yellow;
+  color: red;
+  padding: 32px;
+  font-weight: bold;
+  font-family: Rye;
+  display: none;
+}
 
-    &[visible="true"] {
-      display: block;
-    }
-  }
+form .error[visible="true"] {
+  display: block;
 }
 
 input,
