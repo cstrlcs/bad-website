@@ -1,0 +1,14 @@
+{
+  "name": "bad-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "start": "serve"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "serve": "^14.2.4"
+  }
+}

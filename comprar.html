@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comprar</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <nav>
+    <img src="assets/logo.png" width="200px" />
+  </nav>
+
+  <main>
+    <h1>Cadastre-se</h1>
+
+    <form action="#" onsubmit="getElementById('error').setAttribute('visible', true); return false;">
+      <div class="error" visible="false" id="error">
+        Erro!!
+      </div>
+
+      <label for="email">Email</label>
+      <input id="email" name="email" placeholder="Email">
+
+      <label for="name">Nome</label>
+      <input id="name" name="name" placeholder="Nome completo">
+
+      <label for="phone">Telefone</label>
+      <input type="text" id="phone" name="phone" placeholder="Telefone (obrigatorio)">
+
+      <label for="password">Senha</label>
+      <input id="password" name="password" placeholder="Precisa ter 25 caracteres">
+
+      <label for="birthdate">Idade</label>
+      <input id="birthdate" name="birthdate" placeholder="Idade">
+
+      <label for="country">País</label>
+      <select id="country" name="country">
+        <option value="unknown">Sei lá</option>
+        <option value="antarctica">Brasil</option>
+        <option value="atlantis">Brasil</option>
+        <option value="narnia">Brasil</option>
+      </select>
+
+      <label for="reason">Como nos encontrou</label>
+      <input id="reason" name="reason" placeholder="Como nos encontrou">
+
+      <div>
+        <button type="reset">RESETAR</button>
+        <button type="submit">COMPRAR AGORA!!</button>
+      </div>
+    </form>
+
+  </main>
+
+  <script type="module" src="script.js"></script>
+</body>
+
+</html>
