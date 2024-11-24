@@ -1,5 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Galada&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rye&display=swap");
 
+:root {
+  --color-primary: #e7223a;
+  --color-secondary: #6f1712;
+  --color-tertiary: #ba432e;
+  --color-foreground: #fff8ff;
+  --color-background: #360103;
+  --color-shadow: #6f171280;
+}
+
+/* -- main contents */
 body {
   background: black;
   color: purple;
@@ -7,33 +17,65 @@ body {
   margin: 0;
 }
 
-nav {
-  text-align: left;
+header {
   background-color: red;
-  padding: 64px;
+  display: flex;
+  gap: 32px;
+  text-align: left;
+  padding: 16px 32px;
+
+  & nav {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+
+    & .cart {
+      margin-left: auto;
+    }
+  }
 }
 
 main {
+  background-color: red;
   width: 700px;
   border: 5px solid white;
-  background-color: red;
   text-align: center;
   padding: 20px;
   box-shadow: 10px 10px 5px gray;
 }
 
-button {
-  display: block;
-  border-radius: 0;
-  border: 2px solid black;
-  padding: 8px 10px;
-  background-color: white;
-  box-shadow: 5px 5px 5px white;
-  border-radius: 4px;
-}
+/* -- main contents */
 
-button.cart {
-  margin-left: auto;
+.button {
+  background-color: white;
+  color: black;
+  font-weight: 300;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  border-radius: 0;
+  padding: 4px 24px;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  transition: transform 200ms;
+
+  &:disabled {
+    cursor: default;
+    opacity: 0.5;
+    border: none;
+  }
+
+  &:not(:disabled) {
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
 }
 
 marquee {
@@ -50,14 +92,9 @@ blink {
   animation: blink 1s linear infinite;
 }
 
-a {
-  text-decoration: none;
-  color: purple;
-}
-
 p {
   width: 100%;
-  font-weight: 100;
+  font-weight: 400;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -69,23 +106,19 @@ form {
   text-align: left;
   margin: auto;
   flex-direction: column;
-}
 
-.error {
-  background-color: yellow;
-  color: red;
-  padding: 32px;
-  font-weight: bold;
-  font-family: Rye;
-  display: none;
-}
+  & .error {
+    background-color: yellow;
+    color: red;
+    padding: 32px;
+    font-weight: bold;
+    font-family: Rye;
+    display: none;
 
-.error[visible="true"] {
-  display: block;
-}
-
-form button {
-  display: inline;
+    &[visible="true"] {
+      display: block;
+    }
+  }
 }
 
 input,
@@ -105,28 +138,6 @@ fieldset {
   display: flex;
   flex-direction: column;
   gap: 4px;
-}
-
-dialog {
-  position: fixed;
-  background: red;
-  padding: 64px;
-  bottom: 0;
-  margin-bottom: 0;
-  font-size: 64px;
-  font-family: Galada;
-  color: white;
-  width: 100%;
-  border: 4px solid white;
-}
-
-dialog div {
-  display: flex;
-  align-items: center;
-}
-
-dialog::backdrop {
-  background-color: #000000cc;
 }
 
 @keyframes blink {
